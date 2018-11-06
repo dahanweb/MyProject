@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/userform.css">
+  <title>아이디 찾기 : 다한웹</title>
+</head>
+<body>
+  <header>
+    <div class="id_pw_find_header">
+      <h2 class="id_pw_find_h2">
+        <span>아이디와 비밀번호 찾기</span>
+      </h2>
+      <div>이메일 주소로 아이디와 비밀번호를 찾을 수 있습니다.</div>
+    </div>
+  </header>
+  <section>
+    <article class="">
+      <h3>이메일 주소로 아이디 찾기</h3>
+      <form action="dbid_find.jsp" method="post">
+        <input class="search_input" type="text" name="id_name" placeholder="이름"><p>
+        <input class="search_input" type="text" name="id_email" placeholder="이메일 주소"></p>
+        <input class="submit_button" type="submit" value="확인">
+      </form>
+    </article>
+    <article class="">
+      <h3>비밀번호 찾기</h3>
+      <form action="dbpw_find.jsp" method="post">
+        <input class="search_input" type="text" name="pw_name" placeholder="이름"><p>
+        <input class="search_input" type="text" name="pw_id" placeholder="아이디"></p>
+        <input class="submit_button" type="submit" value="확인">
+      </form>
+    </article>
+
+  </section>
+</body>
+</html>
