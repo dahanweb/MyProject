@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR" pageEncoding="EUC-KR" %>
+<%@ page language="java" contentType="text/html; charset=EUC-KR"
+pageEncoding="EUC-KR" %>
 
 
 <!DOCTYPE html>
@@ -20,25 +21,19 @@
     <form action="dbsignup.jsp" method="post" id="signupform">
       <article class="signup_content">
         <h3>아이디</h3>
-        <input class="signup_input" type="text" name="signup_id">
+        <input class="signup_input" type="text" name="id">
         <h3>비밀번호</h3>
-        <input class="signup_input" type="password" name="signup_pw">
+        <input class="signup_input" type="password" name="pw">
         <h3>비밀번호 재확인</h3>
-        <input class="signup_input" type="password" name="signup_repw">
+        <input class="signup_input" type="password" name="repw">
         <h3>이메일</h3>
-        <input class="signup_input" type="email" name="signup_email">
+        <input class="signup_input" type="email" name="email">
       </article>
       <article class="user_content">
         <h3>이름</h3>
         <input class="signup_input" type="text" name="name">
         <h3>닉네임</h3>
         <input class="signup_input" type="text" name="nicname">
-        <h3>성별</h3>
-        <select class="signup_input" name="sex" form="signupform">
-          <option value="성별">성별</option>
-          <option value="남자">남자</option>
-          <option value="여자">여자</option>
-        </select>
       </article>
       <input class="submit_button" type="submit" value="가입하기">
     </form>
