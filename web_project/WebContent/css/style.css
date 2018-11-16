@@ -1,0 +1,21 @@
+body,ul{margin:0;padding:0;list-style:none}
+a{display:block;text-decoration:none;color:white}
+h2,h3{margin:0}
+.wrap_top_header , .header_menu_wrap{padding:0 30px}
+header{border-bottom:1px solid gray}
+.header_menu{background-color:#eee}
+header #top_header{height:40px;background-color: darkcyan}
+header div>ul{text-align:right;}
+header div>ul>li{display:inline-block;padding:8px}
+{padding:0 30px}
+.header_logo{display:inline-block;border:1px solid gray;padding:20px;margin:5px}
+nav ul{display:inline-block;padding:15px 25px;}
+nav ul>li{display:inline-block;font-size:1.3rem}
+aside{display:inline-block;border:1px solid gray;width:15%;float:left}
+aside h2{border-bottom:1px solid gray;text-align:center;padding:40px 0}
+aside ul>li{padding:20px;}
+.content{padding:30px;height:500px}
+.contents{display:inline-block;padding:30px}
+.qnatable{border:1px solid gray}
+.qnatable ul>li{display:inline-block}
+footer{position:relative;border-top:1px solid gray}
