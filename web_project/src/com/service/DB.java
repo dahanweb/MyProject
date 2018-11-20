@@ -55,34 +55,6 @@ public class DB {
 		}
 		
 	}
-	
-	public boolean idcheck(String id) throws Exception{
-		Connection conn = null;
-		PreparedStatement pstmt =null;
-		ResultSet rs = null;
-		
-		try {
-			conn = getConnection();
-			pstmt =  conn.prepareStatement("select id from signup");
-			rs = pstmt.executeQuery();
-			
-			while(rs.next()) {
-				if(rs.getString("id").equals(id)){
-					return true;
-				}
-			}
-		}catch(Exception e) {e.printStackTrace();}
-		finally {
-			if(rs != null)
-				try {rs.close();}catch(SQLException sqle) {}
-			if(pstmt != null)
-				try {pstmt.close();}catch(SQLException sqle) {}
-			if(conn != null)
-				try {conn.close();}catch(SQLException sqle) {}
-		}
-		
-		return false;
-	}
 
 	private Connection Connection() {
 		// TODO Auto-generated method stub
@@ -94,18 +66,18 @@ public class DB {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		
-		String dbpasswd ="";
+		String dbpw ="";
 		int x = 1;
 		
 		try {
-			conn = Connection();
+			conn = getConnection();
 			pstmt = conn.prepareStatement("select pw from signup where id=?");
 			pstmt.setString(1,id);
 			rs = pstmt.executeQuery();
 			
 			if(rs.next()) {
-				dbpasswd = rs.getString("pw");
-				if(dbpasswd.equals(pw)) {
+				dbpw = rs.getString("pw");
+				if(dbpw.equals(pw)) {
 					x = 1; //성공
 				}
 
@@ -114,6 +86,8 @@ public class DB {
 				}
 
 			}
+			else
+				x = 0; //실패
 
 		}catch(Exception ex) {
 			ex.printStackTrace();
