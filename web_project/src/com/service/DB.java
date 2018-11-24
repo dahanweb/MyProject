@@ -101,4 +101,31 @@ public class DB {
 		}
 		return x;
 	}
+	public boolean confirmId(String id) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		boolean result = false;
+		
+		try {
+			conn = getConnection();
+			pstmt = conn.prepareStatement("select id from signup where id=?");
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			
+			if(rs.next()) {
+				result = true;
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			if(rs != null)
+				try {rs.close();}catch(SQLException sqle) {}
+			if(pstmt != null)
+				try {pstmt.close();}catch(SQLException sqle) {}
+			if(conn != null)
+				try {conn.close();}catch(SQLException sqle) {}
+		}
+		return result;
+	}
 }

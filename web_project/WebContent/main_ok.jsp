@@ -23,7 +23,7 @@ try{
   <div id="top_header">
     <div class="wrap_top_header">
       <ul>
-        <li>안녕하세요. <%=id %>님</li>
+        <li class="greetings">안녕하세요. <%=id %>님</li>
       	<li><a href="mypage.jsp?id=<%=id %>">마이페이지</a></li>
       	<li><a href="logout.jsp">로그아웃</a></li>
       </ul>
